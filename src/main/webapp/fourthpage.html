@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/1.4.0/js/ngDialog.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+
+
+
+<script src="script.js"></script>
+<link rel="stylesheet" href="css/style.css">
+
+<head>
+<div ng-app="myApp" ng-controller="secondController">
+<div class="sidenav">
+  <a href="#">Policy Decision</a>
+  <a href="#">Support Agent</a>
+  <a href="#">Caution Letter</a>
+  <a href="#">Incident</a>
+</div>
+<header>
+   <h1>ABC Insurance Company</h1>
+</header>
+<style>
+.button{
+cursor:pointer;
+position:relative;
+transition:.5s ease;
+top:450px;
+left:270px;
+}
+</style>
+
+</head>
+<body >
+<iframe id="iFrame1" scrolling="yes" src="" marginwidth="400px" 
+
+
+style="left:3.0in;height:400px;width:655px;position:absolute;top:150px;border:2px solid blue" frameborder="1"> </iframe>
+<div  data-ng-init="init()"></div>
+<div class="frame">
+<label style="padding-left:170px;"><h3>Caution Letter:</h3></label>
+</div>
+<button class="button" ng-click="myFunc()">Finish</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="button" ng-click="myfunc2()">Send For Review</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="button" ng-click="close()">Close</button>
+   <modal visible="showModal">
+      Successfull
+  </modal>
+</div>
+     
+<div id="fixedfooter">Copyright © 2018 ABC Insurance Company pvt ltd </div>
+
+</body>
+</html>

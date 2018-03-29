@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/1.4.0/js/ngDialog.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="script.js"></script>
+
+
+<body ng-app="myApp" >
+<header>
+   <h1>Work Item Summary</h1>
+</header>
+<div  ng-controller="secondController">
+<div class="sidenav">
+  <a href="#">Policies & Accounts</a>
+  <a href="#">Services</a>
+  <a href="#">Work Item History</a>
+  <a href="#">Report</a>
+</div>
+<div class=main>
+<label>Reund-Claim for: {{value.client}} <br><br>
+<label><h4><b><u>Work Item Details</u></b></h4> </label><br>
+<label >Policy Number: {{value.policyName}}</label><br>
+<label >Vehicle: {{value.vehicle}}</label><br>
+<label >Class: {{value.class}}</label><br>
+<label >Effective date: {{value.date}}</label><br>
+<label >Amount Paid: {{value.amount}}</label><br><br>
+
+
+<label><b>Recommended Action:</b> </label><br>
+
+<textarea>{{textArea}} {{value.policyName}}</textarea><br><br>
+
+
+<b>Reasons:</b><br>
+<textarea >{{reason}}</textarea><br><br>
+
+<button ng-click="submit()">Record Decision</button>&nbsp;&nbsp;&nbsp;
+<button ng-click="close()">Close</button>&nbsp;&nbsp;&nbsp;
+<!--<button>Send</button>-->
+</body>
+</div>
+<div id="fixedfooter">Copyright © 2018 ABC Insurance Company pvt ltd </div>
+</html>

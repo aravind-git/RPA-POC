@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/1.4.0/js/ngDialog.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="script.js"></script>
+<body ng-app="myApp">
+
+<div  ng-controller="myCtrl">
+<!--<div class="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>-->
+<header>
+   <h1>Underwriter In-tray
+</header>
+<!-- Page content -->
+<div >
+
+<table border="1" >
+<tr ng-model="first">
+<th>Days Left </th>
+<th> Task type</th>
+<th> Work Item</th>
+<th>Policy Number </th>
+<th> Client Name</th>
+<th> Reason For Review</th>
+</tr>
+<tr ng-repeat="x in names">
+<td>{{x.daysLeft}}</td>
+<td><a href="secondpage.html" ng-click="validate(x.id)">{{x.taskType}}</a></td>
+<td>{{x.workItem}}</td>
+<td>{{x.policyName}}</td>
+<td>{{x.client}}</td>
+<td>{{x.reason}}</td>
+
+</tr>
+</table>
+</div>
+</div>
+
+
+<div id="fixedfooter1">Copyright © 2018 ABC Insurance Company pvt ltd </div>
+</body>
+</html>
